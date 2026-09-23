@@ -1,0 +1,651 @@
+/* ============================================
+   MANDIMART - COMPLETE STYLESHEET
+   Green Theme for Agricultural Marketplace
+   ============================================ */
+
+/* ===== CSS VARIABLES ===== */
+:root {
+    --green: #1e7e34;
+    --green-dark: #145a24;
+    --leaf: #2e9e4f;
+    --gold: #f5a623;
+    --cream: #f4f7f2;
+    --ink: #22301f;
+    --white: #ffffff;
+    --gray: #6b7a66;
+    --light-gray: #e2e8dd;
+    --danger: #dc3545;
+    --success: #28a745;
+}
+
+/* ===== RESET & BASE ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ===== NAVBAR ===== */
+.navbar-mandi {
+    background: linear-gradient(90deg, var(--green-dark), var(--green));
+    padding: 0.6rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.navbar-mandi .brand {
+    color: var(--white);
+    font-weight: 800;
+    font-size: 1.4rem;
+}
+
+.navbar-mandi .brand span {
+    color: var(--gold);
+}
+
+.navbar-mandi .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.navbar-mandi .nav-links a {
+    color: #eaf5ec;
+    margin: 0 0.6rem;
+    font-weight: 500;
+    font-size: 0.92rem;
+    transition: color 0.3s;
+}
+
+.navbar-mandi .nav-links a:hover {
+    color: var(--gold);
+}
+
+.btn-login {
+    background: var(--gold);
+    color: var(--white);
+    border: none;
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.btn-login:hover {
+    transform: translateY(-2px);
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+    background: linear-gradient(120deg, #145a24, #2e9e4f);
+    color: var(--white);
+    padding: 3.5rem 1rem;
+    text-align: center;
+}
+
+.hero h1 {
+    font-weight: 800;
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    max-width: 720px;
+    margin: 0.8rem auto;
+    opacity: 0.92;
+    font-size: 1.1rem;
+}
+
+.hero-buttons {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-hero-primary {
+    background: var(--gold);
+    color: var(--white);
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: transform 0.2s;
+}
+
+.btn-hero-primary:hover {
+    transform: translateY(-3px);
+    color: var(--white);
+}
+
+.btn-hero-secondary {
+    border: 2px solid var(--white);
+    color: var(--white);
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+
+.btn-hero-secondary:hover {
+    background: var(--white);
+    color: var(--green);
+}
+
+/* ===== STATS STRIP ===== */
+.stats-strip {
+    background: var(--white);
+    border-bottom: 1px solid var(--light-gray);
+    padding: 1rem 0;
+}
+
+.stat-card {
+    text-align: center;
+    padding: 1.2rem 0.5rem;
+}
+
+.stat-card .num {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--green);
+}
+
+.stat-card .lbl {
+    font-size: 0.85rem;
+    color: var(--gray);
+}
+
+/* ===== SECTIONS ===== */
+.section {
+    padding: 2.5rem 1rem;
+}
+
+.section h2 {
+    font-weight: 800;
+    color: var(--green-dark);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* ===== FEATURE CARDS ===== */
+.feature-card {
+    background: var(--white);
+    border-radius: 14px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 14px rgba(20, 60, 30, 0.08);
+    height: 100%;
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--green);
+    margin-bottom: 0.5rem;
+}
+
+.feature-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.feature-text {
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* ===== CARDS ===== */
+.card {
+    border: none;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(20, 60, 30, 0.08);
+    background: var(--white);
+}
+
+.form-card {
+    padding: 1.5rem;
+}
+
+.form-card .card-title {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--green-dark);
+}
+
+/* ===== BUTTONS ===== */
+.btn-mandi {
+    background: var(--green);
+    color: var(--white);
+    font-weight: 600;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-mandi:hover {
+    background: var(--green-dark);
+    color: var(--white);
+}
+
+.btn-outline-mandi {
+    border: 2px solid var(--green);
+    color: var(--green);
+    font-weight: 600;
+    background: transparent;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-outline-mandi:hover {
+    background: var(--green);
+    color: var(--white);
+}
+
+/* ===== FORMS ===== */
+.form-control, .form-select {
+    margin-bottom: 0.8rem;
+    padding: 0.7rem;
+    border: 1px solid var(--light-gray);
+    border-radius: 8px;
+    font-size: 0.95rem;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px rgba(30, 126, 52, 0.1);
+    outline: none;
+}
+
+/* ===== TABLES ===== */
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.price-table th {
+    background: var(--green);
+    color: var(--white);
+    padding: 0.8rem;
+    text-align: left;
+}
+
+.price-table td {
+    padding: 0.8rem;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.price-table tr:hover {
+    background: #f8faf7;
+}
+
+/* ===== SEARCH BAR ===== */
+.search-bar {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.search-bar .form-control {
+    max-width: 300px;
+    margin: 0;
+}
+
+/* ===== DROP ZONES (AI Compare) ===== */
+.compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.drop-zone {
+    border: 2px dashed var(--green);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    color: var(--gray);
+    background: var(--white);
+    cursor: pointer;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.drop-zone:hover, .drop-zone.drag {
+    background: #eaf5ec;
+    border-color: var(--gold);
+}
+
+.drop-zone img {
+    max-height: 160px;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+}
+
+.upload-icon {
+    font-size: 3rem;
+    color: var(--green);
+    margin-bottom: 0.5rem;
+}
+
+/* ===== RESULT CARDS ===== */
+.result-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== PROGRESS BARS ===== */
+.progress {
+    height: 10px;
+    background: #e9ecef;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 0.5rem 0;
+}
+
+.progress-bar {
+    background: var(--green);
+    height: 100%;
+    transition: width 0.5s ease;
+}
+
+/* ===== CHATBOT ===== */
+.chat-fab {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 1040;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--green);
+    color: var(--white);
+    border: none;
+    font-size: 1.6rem;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.chat-fab:hover {
+    transform: scale(1.1);
+}
+
+.chat-box {
+    position: fixed;
+    bottom: 5rem;
+    right: 1rem;
+    z-index: 1050;
+    width: 340px;
+    max-height: 70vh;
+    display: none;
+    flex-direction: column;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    background: var(--white);
+}
+
+.chat-box.open {
+    display: flex;
+}
+
+.chat-head {
+    background: var(--green);
+    color: var(--white);
+    padding: 0.7rem 1rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-head button {
+    background: var(--white);
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+}
+
+.chat-body {
+    background: var(--white);
+    padding: 0.8rem;
+    flex: 1;
+    overflow-y: auto;
+    font-size: 0.9rem;
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-body .msg {
+    margin: 0.35rem 0;
+    padding: 0.5rem 0.7rem;
+    border-radius: 10px;
+    max-width: 85%;
+    word-wrap: break-word;
+}
+
+.chat-body .bot {
+    background: #eef5ec;
+    align-self: flex-start;
+}
+
+.chat-body .user {
+    background: var(--green);
+    color: var(--white);
+    margin-left: auto;
+}
+
+.chat-input {
+    display: flex;
+    border-top: 1px solid var(--light-gray);
+}
+
+.chat-input input {
+    flex: 1;
+    border: none;
+    padding: 0.7rem;
+    outline: none;
+}
+
+.chat-input button {
+    background: var(--green);
+    color: var(--white);
+    border: none;
+    padding: 0 1rem;
+    cursor: pointer;
+}
+
+/* ===== LOGIN PAGE ===== */
+.login-card {
+    padding: 2rem;
+}
+
+.nav-pills-mandi .nav-link {
+    color: var(--green);
+    font-weight: 600;
+}
+
+.nav-pills-mandi .nav-link.active {
+    background: var(--green);
+    color: var(--white);
+}
+
+/* ===== ADMIN STATS ===== */
+.stat-box {
+    background: var(--white);
+    border-radius: 14px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 14px rgba(20, 60, 30, 0.08);
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--green);
+}
+
+.stat-label {
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+/* ===== VS TEXT ===== */
+.vs-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--gray);
+    align-self: center;
+}
+
+/* ===== ALERTS ===== */
+.alert {
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.alert-success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-danger {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* ===== AUCTION CARDS ===== */
+.auction-card {
+    padding: 1.5rem;
+}
+
+.auction-live {
+    background: var(--danger);
+    color: var(--white);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.auction-ended {
+    background: var(--gray);
+    color: var(--white);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.timer {
+    font-family: monospace;
+    font-size: 1.2rem;
+    color: var(--danger);
+}
+
+/* ===== CROP CARDS ===== */
+.crop-card {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+}
+
+.crop-emoji {
+    font-size: 3rem;
+}
+
+.crop-info {
+    flex-grow: 1;
+}
+
+.crop-grade {
+    background: var(--success);
+    color: var(--white);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: var(--green-dark);
+    color: #cfe8d4;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .compare-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .navbar-mandi .nav-links {
+        width: 100%;
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+    
+    .chat-box {
+        width: 90vw;
+        right: 5vw;
+    }
+    
+    .search-bar {
+        flex-direction: column;
+    }
+    
+    .search-bar .form-control {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .stat-card .num {
+        font-size: 1.4rem;
+    }
+    
+    .feature-icon {
+        font-size: 2rem;
+    }
+}

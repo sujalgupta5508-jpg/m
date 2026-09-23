@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MandiMart – Direct Farmer-to-Buyer Marketplace</title>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="./style.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - MandiMart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar-mandi">
+        <a class="brand" href="index.html">🌾 Mandi<span>Mart</span></a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="mandi.html">Mandi Prices</a>
+            <a href="crops.html">Crops</a>
+            <a href="auctions.html">Auctions</a>
+            <a href="compare.html">Compare</a>
+            <a href="aicompare.html">AI Compare</a>
+        </div>
+    </nav>
+
+    <main class="container" style="min-height:60vh">
+        <section class="section">
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-5">
+                    <div class="card login-card">
+                        
+                        <!-- Login Tabs -->
+                        <ul class="nav nav-pills nav-pills-mandi mb-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#" onclick="showTab('login',this)">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" onclick="showTab('register',this)">Register</a>
+                            </li>
+                        </ul>
+                        
+                        <!-- Login Form -->
+                        <div id="loginTab">
+                            <h4>Welcome Back</h4>
+                            <form id="loginForm" onsubmit="return doLogin(event)">
+                                <input name="email" class="form-control" placeholder="Email" type="email" required>
+                                <input name="password" class="form-control" type="password" placeholder="Password" required>
+                                <button type="submit" class="btn btn-mandi w-100">Login</button>
+                            </form>
+                        </div>
+                        
+                        <!-- Register Form -->
+                        <div id="registerTab" style="display:none">
+                            <h4>Create Account</h4>
+                            <form id="registerForm" onsubmit="return doRegister(event)">
+                                <input name="name" class="form-control" placeholder="Full Name" required>
+                                <input name="email" class="form-control" placeholder="Email" type="email" required>
+                                <input name="phone" class="form-control" placeholder="Phone Number" required>
+                                <select name="role" class="form-select">
+                                    <option value="farmer">Farmer (Seller)</option>
+                                    <option value="buyer">Buyer</option>
+                                </select>
+                                <input name="password" class="form-control" type="password" placeholder="Password" required>
+                                <button type="submit" class="btn btn-mandi w-100">Create Account</button>
+                            </form>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        🌾 MandiMart — Secure login for farmers and buyers<br>
+        <small>Your data is protected with encryption</small>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
