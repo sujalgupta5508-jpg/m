@@ -132,7 +132,7 @@ async function addCrop(event) {
     }
 
     try {
-        const response = await fetch("../backend/add_crop.php", {
+        const response = await fetch(`${BACKEND_URL}/add_crop.php`, {
             method: "POST",
             body: formData,
             credentials: "include"
