@@ -487,7 +487,8 @@ function compareProducts() {
  *  - Testing on your own PC:      "http://localhost:5000"
  *  - Deployed on Render, etc:     "https://your-service-name.onrender.com"
  */
-const API_BASE_URL = "http://localhost:5000";
+const API_BASE_URL = "https://sujalgupta5508-jpg-xxxxx-5000.app.github.dev/compare";
+
 
 // ============================================================
 // IMAGE PREVIEW
