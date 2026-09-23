@@ -981,6 +981,9 @@ function renderComparisonDetails(summary) {
     `;
 }
 
+
+const BACKEND_URL = "https://mandimart.ifree.page/backend";
+
 /**
  * Reset comparison form
  */
