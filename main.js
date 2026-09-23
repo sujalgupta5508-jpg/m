@@ -84,9 +84,9 @@ function findNearby() {
 // ===== CROPS =====
 async function loadCrops() {
     try {
-        const response = await fetch("../backend/get_crops.php", {
-            credentials: "include"
-        });
+        const response = await fetch(`${BACKEND_URL}/get_crops.php`, {
+    credentials: "include"
+});
 
         const result = await response.json();
 
