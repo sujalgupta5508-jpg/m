@@ -188,6 +188,29 @@ function placeOrderById(cropId) {
     window.location.href = `checkout.html?${params.toString()}`;
 }
 
+
+function renderCrops() {
+    const list = document.getElementById('cropList');
+    if (!list) return;
+
+    if (!crops.length) {
+        list.innerHTML = '<p class="text-muted">No crops listed yet.</p>';
+        return;
+    }
+
+    list.innerHTML = crops.map(c => `
+        <div class="col-md-6">
+            <div class="card h-100 p-3">
+                ${c.img && c.img.startsWith('../uploads/')
+                    ? `<img src="${c.img}" class="img-fluid mb-2" style="max-height:140px;object-fit:cover">`
+                    : `<div style="font-size:3rem">🌾</div>`}
+                <h5>${c.name}</h5>
+                <div class="small text-muted">${c.qty} q · Grade ${c.grade}</div>
+                <div><strong>₹${c.price}/q</strong></div>
+                <div class="small">${c.seller} ⭐ ${c.rating}</div>
+            </div>
+        </div>`).join('');
+}
 // ===== AUCTIONS =====
 function loadAuctions() {
     renderAuctions();
